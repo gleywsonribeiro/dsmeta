@@ -5,8 +5,11 @@ import NotificationButton from '../NotificationButton'
 import './styles.css'
 function SalesCard() {
 
-    const [minDate, setMinDate] = useState(new Date());
-    const [maxDate, setMaxDate] = useState(new Date());
+    const date = new Date(new Date().setDate(new Date().getDate() - 365));
+    const dateAtual = new Date();
+
+    const [minDate, setMinDate] = useState(date);
+    const [maxDate, setMaxDate] = useState(dateAtual);
 
     return (
         <>
